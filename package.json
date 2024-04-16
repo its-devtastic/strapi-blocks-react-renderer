@@ -44,7 +44,7 @@
     "check": "pack-up check",
     "lint": "eslint . --ext .cjs,.js,.ts,.tsx",
     "lint:fix": "yarn lint --fix",
-    "postinstall": "husky install",
+    "postinstall": "if [ -d node_modules/husky ]; then husky install; fi",
     "prepack": "pinst --disable",
     "prepublishOnly": "yarn build",
     "postpack": "pinst --enable",
